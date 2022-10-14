@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(const App());
+  runApp(const CaoNalyzerApp());
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
+class CaoNalyzerApp extends StatelessWidget {
+  const CaoNalyzerApp({super.key});
 
   // This widget is the root of your application.
   @override
