@@ -33,10 +33,14 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
         onPressed: _incrementCounter,
-        child: const Icon(Icons.add),
+        isExtended: true,
+        label: const Text('Scan Cacao Beans'),
+        icon: const Icon(Icons.camera_alt),
+        tooltip: 'Scan Cacao Beans',
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
