@@ -1,7 +1,7 @@
-import 'dart:io';
-
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+
+import 'display_picture_screen.dart';
 
 class TakePictureScreen extends StatefulWidget {
   const TakePictureScreen({
@@ -25,7 +25,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
 
     _controller = CameraController(
       widget.camera,
-      ResolutionPreset.max,
+      ResolutionPreset.medium,
       enableAudio: false,
     );
 
@@ -47,6 +47,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             // If the Future is complete, display the preview.
+
             return CameraPreview(_controller);
           } else {
             // Otherwise, display a loading indicator.
@@ -81,20 +82,6 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
         },
         child: const Icon(Icons.camera_alt),
       ),
-    );
-  }
-}
-
-class DisplayPictureScreen extends StatelessWidget {
-  const DisplayPictureScreen({super.key, required this.imagePath});
-
-  final String imagePath;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Display the Picture')),
-      body: Image.file(File(imagePath)),
     );
   }
 }

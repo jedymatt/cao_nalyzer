@@ -3,6 +3,8 @@ import 'package:cao_nalyzer/ui/screens/take_picture_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
+import 'display_picture_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, required this.title});
 
@@ -15,7 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   // method to change Navigation bar index
-  void _onItemTapped(int index) {
+  void _onNavbarTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -35,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: views[_selectedIndex],
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       bottomNavigationBar: BottomNavigationBar(
-        onTap: _onItemTapped,
+        onTap: _onNavbarTapped,
         currentIndex: _selectedIndex,
         items: const [
           BottomNavigationBarItem(
@@ -94,6 +96,19 @@ class _HomeViewState extends State<HomeView> {
             onPressed: () async {
               final XFile? pickedImage =
                   await _picker.pickImage(source: ImageSource.gallery);
+
+              if (pickedImage == null) return;
+
+              if (!mounted) return;
+
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DisplayPictureScreen(
+                    imagePath: pickedImage.path,
+                  ),
+                ),
+              );
             },
             label: const Text('Select an image'),
           ),
@@ -108,6 +123,13 @@ class ResultsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ListView.builder(
+      itemCount: 50,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text('Result $index'),
+        );
+      },
+    );
   }
 }
