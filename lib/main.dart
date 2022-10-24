@@ -1,4 +1,4 @@
-import 'package:cao_nalyzer/screens/home_screen.dart';
+import 'package:cao_nalyzer/ui/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class CaoNalyzerApp extends StatelessWidget {
       title: 'Cao-nalyzer',
       theme: ThemeData(
         useMaterial3: true,
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.brown,
       ),
       home: const HomeScreen(title: 'Cao-nalyzer'),
     );

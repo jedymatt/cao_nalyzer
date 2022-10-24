@@ -1,5 +1,5 @@
 import 'package:camera/camera.dart';
-import 'package:cao_nalyzer/screens/take_picture_screen.dart';
+import 'package:cao_nalyzer/ui/screens/take_picture_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
