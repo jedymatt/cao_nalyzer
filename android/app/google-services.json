@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "687147732089",
+    "project_id": "cao-nalyzer",
+    "storage_bucket": "cao-nalyzer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687147732089:android:27ad9b64635fc3ff5058a8",
+        "android_client_info": {
+          "package_name": "com.jedymatt.cao_nalyzer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687147732089-a55a7f82nilnt1sa2gq9mh345l0tjhbc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-8BGtsP5bmY42g0OpEfNVc_5wDlBjeZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687147732089-a55a7f82nilnt1sa2gq9mh345l0tjhbc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "687147732089-cr0ph2aumn5busr5a8kmb88g2392h8f0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.jedymatt.caoNalyzer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
